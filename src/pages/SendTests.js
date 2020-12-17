@@ -12,7 +12,7 @@ export default function SendTests() {
             <h1>Enviar Prova</h1>
             <FormContainer>
                 <label>Nome da Prova:</label>
-                <input name='test name' type='text' placeholder='Ex: 2020.1' /><br/>
+                <input name='test name' type='text' placeholder='Ex: 2020.1' onChange={e => setNameTest(e.target.value)} /><br/>
 
                 <label name="typeTest">Escolha o tipo da prova:</label>
                 <select name="typeTest">
@@ -35,7 +35,7 @@ export default function SendTests() {
                 </select><br/>
 
                 <label>Link:</label>
-                <input name='link' type='url' placeholder='Link para o PDF' /><br/>
+                <input name='link' type='url' placeholder='Link para o PDF' onChange={e => setLinkTest(e.target.value)} /><br/>
             </FormContainer>
         </Container>
     );
